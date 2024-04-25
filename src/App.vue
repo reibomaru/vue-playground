@@ -1,24 +1,34 @@
-<script setup lang="ts">
+<script lang="tsx">
+import { defineComponent } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import logo from './assets/logo.svg'
+
+export default defineComponent({
+  name: 'App',
+  setup: () => {
+    return () => (
+      <>
+        <header>
+          <img alt="Vue logo" class="logo" src={logo} width="125" height="125" />
+
+          <div class="wrapper">
+            <HelloWorld msg="You did it!" />
+
+            <nav>
+              <RouterLink to="/">Home</RouterLink>
+              <RouterLink to="/about">About</RouterLink>
+              <RouterLink to="/counter">Couter</RouterLink>
+            </nav>
+          </div>
+        </header>
+
+        <RouterView />
+      </>
+    )
+  }
+})
 </script>
-
-<template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
-</template>
 
 <style scoped>
 header {
