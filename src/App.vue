@@ -19,6 +19,7 @@ export default defineComponent({
               <RouterLink to="/">Home</RouterLink>
               <RouterLink to="/about">About</RouterLink>
               <RouterLink to="/counter">Couter</RouterLink>
+              <RouterLink to="/input">Input</RouterLink>
             </nav>
           </div>
         </header>
