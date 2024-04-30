@@ -20,6 +20,7 @@ export default defineComponent({
               <RouterLink to="/about">About</RouterLink>
               <RouterLink to="/counter">Couter</RouterLink>
               <RouterLink to="/input">Input</RouterLink>
+              <RouterLink to="/slot">SlotProps</RouterLink>
             </nav>
           </div>
         </header>
